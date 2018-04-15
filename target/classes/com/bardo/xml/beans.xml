@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="mundo" class="com.bardo.beans.Mundo">
+   <property name="saludo" value="Hola mundo esto es un saluoh hermanou!"></property>
+</bean>
+
+
+<bean id="persona" class="com.bardo.beans.Persona">
+   <property name="id" value="1"></property>
+   <property name="nombre" value="Walter Muñoz"></property>
+   <property name="apodo" value="Bardo"></property>
+   <property name="pais">
+        <bean id="pais" class="com.bardo.beans.Pais">
+		 <property name="nombre" value="Chile !"></property>
+		  <property name="ciudad">
+		   <bean id="ciudad" class="com.bardo.beans.Ciudad">
+			 <property name="nombre" value="Talca city!"></property>
+		   </bean>
+		 </property>
+		</bean>
+   </property>
+</bean>
+
+</beans>
